@@ -1,3 +1,93 @@
+* {
+    background-color: #FAFAFA;
+}
+
+.header-page {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.header-page .tittle {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+    color: #000000;
+}
+
+.header-page .description {
+    width: 30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    }
+
+.header-page .description h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: -0.25rem;
+}
+
+.contents {
+    margin-top: 4rem;
+    margin-left: 9rem;
+}
+
+.contents .group {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.contents .group .person img {
+    width: 14.875rem;
+    height: 21.688rem;
+}
+
+.contents .group:nth-child(1) {
+    margin-bottom: 4rem;
+}
+
+.contents .group .person p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+
+.contents .group .person h3{
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    transform: rotate(90deg);
+    height: 0;
+    position: absolute;
+    margin: 50px -13px 0 0;
+    width: 100.8px;
+    right: 0;
+}
+
+.contents .group .person  {
+    position: relative;
+    width: 300px;
+}
+
+.contents .group .person:nth-child(3n-1)  {
+    margin-top: 7rem;
+}
 
 footer {
     display: flex;
@@ -8,6 +98,7 @@ footer {
     font-size: 0.875rem;
     line-height: 1.063rem;
     color: #A9A9A9;
+    margin-top: 5rem;
 }
 
 footer a {
@@ -17,4 +108,46 @@ footer a {
 
 footer a:hover {
     color: aquamarine;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0 12px;
+    }
+    
+    .header-page {
+        flex-direction: column;
+    }
+
+    .header-page .description {
+        width: 100%;
+    }
+
+    .contents .group {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contents {
+        margin: 0;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+
+    .contents .group .person img {
+        width: 8rem;
+        height: 12rem;
+    }
+
+    .contents .group .person {
+        width: 12rem;
+    }
+
+    .contents .group .person:nth-child(3n-1)  {
+        margin-top: 0;
+    }
+    
+    .contents .group .person:nth-child(2n-2)  {
+        margin-top: 5rem;
+    }
+
 }
